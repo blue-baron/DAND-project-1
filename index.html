@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+<body>
+<div class="head-wrapper deep-orange darken-4 white-text">    
+        <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h1>Analysis of the Stroop task</h1>
+            <p><strong>Student project by Hilary Seselja</strong> | Udacity Data Analyst Nanodegree</p>
+              </div>
+        </div>
+        </div>
+        </div>
+        
+        
+<div class="container">    
+<div class="row">        
+<div class="col s12">
+        <h2>Background Information</h2>
+
+        <p>In a Stroop task, participants are presented with a list of words, with each word displayed in a color of ink. The participant’s task is to say out loud the color of the ink in which the word is printed. The task has two conditions: a congruent words condition, and an incongruent words condition. In the congruent words condition, the words being displayed are color words whose names match the colors in which they are printed: for example <span style="color:red">RED</span>, <span style="color:blue">BLUE</span>. In the incongruent words condition, the words displayed are color words whose names do not match the colors in which they are printed: for example <span style="color:green">PURPLE</span>, <span style="color:purple">ORANGE</span>. In each case, we measure the time it takes to name the ink colors in equally-sized lists. Each participant will go through and record a time from each condition.</p>
+              </div>
+    </div>
+        
+<div class="divider"></div>
+       
+        <div class="row">
+            <div class="col s12">
+                <h2>1. Identify the variables in the experiment</h2>
+              <p>The independent variable is <strong>word / color congruency</strong>. The ink color was changed from matching the word (congruent condition) to not matching the word (incongruent condition).</p>
+              <p>The dependent variable is <strong>task completion time</strong>. This was defined as the amount of time it took participants to name all the ink colors in each task.</p>
+                </div>
+         
+        </div>
+           
+        
+<div class="divider"></div>
+        
+        <div class="row">
+          
+            <div class="col s12">
+            <h2>2. Establish hypotheses and a statistical test</h2>
+                
+            <p>I expect it will take participants longer to name ink colors in the incongruent condition than in the congruent one.</p>
+
+           
+            <h4>Null Hypothesis</h4>
+            <p>Changing the display of color words from congruent to incongruent colors will not alter task completion time. The mean difference between the two samples will equal zero.</p>
+            <blockquote>H<sub>0</sub>: &mu;<sub>D</sub> &#8804; 0</blockquote>
+                <small>where &mu;<sub>D</sub> is the mean difference between the two samples.</small>
+           
+            <h4>Alternative Hypothesis</h4>
+            <p>Changing the display of color words from congruent to incongruent colors will increase task completion time. The mean difference will be greater than zero.
+</p>
+            <blockquote>H<sub>A</sub>: &mu;<sub>D</sub> &#62; 0</blockquote>
+               
+            </div>
+             
+             
+            <div class="col s12">
+            <h4>Statistical test: dependent samples t-test</h4>
+                <p>I will test the null hypothesis with a one-tailed dependent samples t-test in the positive direction. &alpha; &#61; 0.05.</p>
+              <p>A dependent samples t-test is appropriate because the experiment has a repeated measures design. The same group participated in two tasks with one condition changed. This provides dependent samples.</p>
+              <h5>Assumptions of the dependent samples t-test.</h5>
+              <ul class="bullets">
+                <li>The data type is continuous rather than discrete.</li>
+                <li>The sample is randomly selected.</li>
+                <li>The sample distribution is approximately normal.</li>
+                <li>The sample does not contain extreme outliers.</li>
+              </ul>
+
+                <p>For this experiment a one-tailed test is appropriate because I am hypothesising a specific directional effect (that applying the incongruent condition will increase task completion time).</p>
+                <p>&alpha; &#61; 0.05 indicates the mean difference will be significant at p &#60; 0.05.</p>
+            </div>
+         
+            
+    
+    </div>
+        
+<div class="divider"></div>
+        
+    <div class="row">
+          <div class="col s12">
+            <h2>3. Report descriptive statistics</h2>
+            <table>
+                <thead class="blue-grey lighten-3">
+                    <th></th>
+                    <th>Congruent Condition</th>
+                    <th>Incongruent Condition</th>
+                </thead>
+                <tbody class="blue-grey lighten-5">
+                    <tr class="blue-grey lighten-4">
+                        <td colspan="3"><strong>MEASURES OF CENTRAL TENDENCY</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Mean</td><td>14.05</td><td>22.02</td>
+                    </tr>
+                    <tr>
+                        <td>Median</td><td>14.36</td><td>21.02</td>
+                    </tr>
+                    <tr class="blue-grey lighten-4">
+                        <td colspan="3"><strong>MEASURES OF VARIABILITY</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Range</td><td>13.70</td><td>19.57</td>
+                    </tr>
+                    <tr>
+                        <td>IQR (Interquartile range)</td><td>4.66</td><td>5.25</td>
+                    </tr>
+                    <tr>
+                        <td>Standard Deviation</td><td>3.56</td><td>4.80</td>
+                    </tr>
+                </tbody>
+            </table>
+              <p><a href="https://docs.google.com/spreadsheets/d/1EGWL66pDB7tnRVd7IjDubjGDN-tZ10vW9otGp-GpY3w/edit?usp=sharing">See the working spreadsheet here.</a></p>
+           </div>
+           </div>
+         
+            
+    
+        <div class="divider"></div>
+        <div class="row">
+        <div class="col s12">
+        <h2>4. Plot the data</h2>
+            </div>
+           
+        <div class="col s12 m6">
+          <div class="card blue-grey lighten-4">
+            <div class="card-content">
+              <p>Histogram of the Congruent Condition.</p>
+            </div>
+    
+              <div class="card-image">
+              <img src="https://docs.google.com/spreadsheets/d/1EGWL66pDB7tnRVd7IjDubjGDN-tZ10vW9otGp-GpY3w/pubchart?oid=1721710166&format=image" alt="histogram displaying the results of the incongruent stroop test sample" />
+            </div>
+            
+          </div>
+        </div>
+    
+        <div class="col s12 m6">
+          <div class="card blue-grey lighten-4">
+            <div class="card-content">
+              <p>Histogram of the Incongruent Condition.</p>
+            </div>
+    
+              <div class="card-image">
+              <img src="https://docs.google.com/spreadsheets/d/1EGWL66pDB7tnRVd7IjDubjGDN-tZ10vW9otGp-GpY3w/pubchart?oid=667928766&format=image" alt="histogram displaying the results of the incongruent stroop test sample" />
+            </div>
+    
+          </div>
+        </div>
+     
+            
+         </div>
+        <div class="col s12">
+            <p>The congruent condition histogram displays a normal distribution.</p> 
+            <p>The incongruent condition histogram has been positively skewed by two outliers. In a positively-skewed distribution the median is greater than the mean and that is the case here (Mean = 22.02 seconds, Median = 21.02 seconds). The histogram shows that all datapoints are within three standard deviations from the mean (36.42 seconds) so for the purposes of this project we have not removed the outliers from the dataset.</p>
+            <p>A comparison of the two histograms clearly illustrates the difference between the two samples. The range of the congruent sample spreads from 6 to 24 seconds while in the incongruent sample it is 15 to 36 seconds.</p>
+        </div>
+        
+<div class="divider"></div>
+        
+    <div class="row">
+          <div class="col s12">
+        <h2>5. Perform the statistical test and interpret the results</h2>
+            
+            <table class="center-align">
+                <thead class="blue-grey lighten-3">
+                    <th colspan="9" class="center-align">Dependent samples test</th>
+                    </thead>
+                <tbody class="blue-grey lighten-5">
+                    <tr>
+                        <td rowspan="4"></td>
+                        <td colspan="5" class="blue-grey lighten-4 center-align"><strong>Paired Differences</strong></td>
+                        <td colspan="3" rowspan=""></td>
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                        <td colspan="3" class="blue-grey lighten-4"></td>
+                        <td colspan="2" class="blue-grey lighten-4 center-align">95% Confidence Interval</td>
+                        <td colspan="3"></td>
+                    <tr>
+                        <td class="blue-grey lighten-4 center-align">Mean</td>
+                        <td class="blue-grey lighten-4 center-align">Std dev</td>
+                        <td class="blue-grey lighten-4 center-align">Std Error Mean</td>
+                        <td class="blue-grey lighten-4 center-align">Lower</td>
+                        <td class="blue-grey lighten-4 center-align">Upper</td>
+                        <td class="center-align">t</td>
+                        <td class="center-align">df</td>
+                        <td class="center-align">p, two-tailed</td>
+                    </tr>
+                    <tr>
+                        <td>Pair: Congruent - Incongruent</td>
+                        <td class="blue-grey lighten-4 center-align">7.96</td>
+                        <td class="blue-grey lighten-4 center-align">4.86</td>
+                        <td class="blue-grey lighten-4 center-align">0.99</td>
+                        <td class="blue-grey lighten-4 center-align">5.91</td>
+                        <td class="blue-grey lighten-4 center-align">10.02</td>
+                        <td class="center-align">8.02</td>
+                        <td class="center-align">23</td>
+                        <td class="center-align">&#60; 0.0001</td>
+                    </tr>
+                    
+                </tbody>
+            </table>  
+            <p><a href="https://docs.google.com/spreadsheets/d/1EGWL66pDB7tnRVd7IjDubjGDN-tZ10vW9otGp-GpY3w/edit?usp=sharing">See the working spreadsheet here.</a></p>
+              
+            <p>The dependent samples t-test provided evidence that changing the display of color words from congruent to incongruent colors increases task completion time. The t-critical value is 1.714 and the t-statistic is 8.02.</p> 
+            <p>There was a significant difference in the time taken to complete the task in the congruent (M = 14.05, SD = 3.56) and incongruent (M = 22.06, SD = 4.80) conditions; t(23) = 8.02, p &#60; 0.0001, one-tailed. 95% CI [5.91, 10.02].</p>
+            <p>R<sup>2</sup> = 0.7366. 73.66% of the differences between task completion times are due to the change in word color congruency.</p>
+            <p>I reject the null hypothesis; changing words from congruent to incongruent colors significantly increases the amount of time it takes participants to name the color the words are displayed in. This result was as expected.</p>
+            </div>
+        </div>
+        
+        </div>      
+        
+<div class="foot-wrapper blue-grey lighten-4">    
+<div class="container">
+   <div class="row">
+        <div class="col s12">
+            <h2>References</h2>
+            
+            <ul>
+                <li>Timothy McAdoo. 2010. <em>Formatting Statistics: Using Brackets</em>. [ONLINE] Available at: <u><a href="http://blog.apastyle.org/apastyle/2010/06/formatting-statistics-using-brackets.html">http://blog.apastyle.org/apastyle/2010/06/formatting-statistics-using-brackets.html</a></u>. [Accessed 8 May 2017].</li>
+
+                <li>Stat Trek. 2017. <em>Hypothesis Test: Difference Between Paired Means</em>. [ONLINE] Available at: <u><a href="http://stattrek.com/hypothesis-test/paired-means.aspx?Tutorial=AP">http://stattrek.com/hypothesis-test/paired-means.aspx?Tutorial=AP</a></u>. [Accessed 24 April 2017].</li>
+                
+                <li>Statistics Help For Students. 2008. <em>How do I report paired samples T-test data in APA style?</em>. [ONLINE] Available at: <u><a href="http://statistics-help-for-students.com/How_do_I_report_paired_samples_T_test_data_in_APA_style.htm#.WP3MB_mGO00">http://statistics-help-for-students.com/How_do_I_report_paired_samples_T_test_data_in_APA_style.htm#.WP3MB_mGO00</a></u>. [Accessed 24 April 2017].</li>
+            <li>Satistics Solutions. 2017. <em>Paired Sample T-Test</em>. [ONLINE] Available at: <u><a href="http://www.statisticssolutions.com/manova-analysis-paired-sample-t-test/">http://www.statisticssolutions.com/manova-analysis-paired-sample-t-test/</a></u>. [Accessed 5 May 2017].</li>
+            </ul>
+            
+            <h5>Software</h5>
+            <ul>
+                <li>Graphpad Software. 2017. <em>Quick Calcs</em>. [ONLINE] Available at: <u><a href="http://graphpad.com/quickcalcs/">http://graphpad.com/quickcalcs/</a></u>. [Accessed 24 April 2017].</li>
+            </ul>
+            <h5>CSS Styles</h5>
+            <ul>
+                <li>Materialize. 2017. <em>A modern responsive front-end framework based on Material Design</em>. [ONLINE] Available at: <u><a href="http://materializecss.com/">http://materializecss.com/</a></u>. [Accessed 4 March 2017].</li>
+            </ul>
+        </div>
+        </div>  
+        </div>
+    </div>
+        
+
+        
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>

@@ -1,0 +1,45 @@
+body {
+    padding-top: 0;
+}
+.head-wrapper {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+.foot-wrapper {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+.divider {
+    margin: 40px 0 20px 0;
+}
+h2 {
+    font-size: 1.9rem;
+}
+h3 {
+    font-size: 1.7rem;
+}
+h4 {
+    font-size: 1.5rem;
+}
+h5 {
+    font-size: 1.3rem;
+}
+h6 {
+    font-size: 1.1rem;
+}
+
+.border-blue-grey {
+    border: 1px solid #b0bec5;   
+}
+blockquote {
+    font-size: 1.6rem;
+}
+.foot-wrapper li {
+    margin-bottom: 1rem;
+}
+.bullets {
+    margin-left: 30px;
+}
+.bullets li {
+    list-style-type: disc !important;     
+}
