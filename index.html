@@ -70,16 +70,23 @@
             <div class="col s12">
             <h4>Statistical test: dependent samples t-test</h4>
                 <p>I will test the null hypothesis with a one-tailed dependent samples t-test in the positive direction. &alpha; &#61; 0.05.</p>
-              <p>A dependent samples t-test is appropriate because the experiment has a repeated measures design. The same group participated in two tasks with one condition changed. This provides dependent samples.</p>
-              <h5>Assumptions of the dependent samples t-test.</h5>
+              <h5>Why this test?</h5>
+              <p>A dependent samples t-test is an appropriate choice because:</p>
               <ul class="bullets">
-                <li>The data type is continuous rather than discrete.</li>
+                <li>The samples are dependent. This experiment has a repeated measures design. The same group participated in two tasks with one condition changed providing dependent samples. If the two samples were drawn from different groups of participants then an independent samples t-test would be more appropriate.</li>
+                <li>The sample size of 24 is small, t-tests are a good choice for sample sizes under 30.</li> 
+                <li>The data type (time measured in seconds) is continuous rather than discrete. T-tests require a continuous data-type.</li>
+                <li>A z-test cannot be performed because that requires the population mean which is unknown.</li>
+              </ul>
+
+              <p>Dependent samples t-tests make the following assumptions (which have been met for this experiment).</p>
+              <ul class="bullets">
                 <li>The sample is randomly selected.</li>
                 <li>The sample distribution is approximately normal.</li>
                 <li>The sample does not contain extreme outliers.</li>
               </ul>
 
-                <p>For this experiment a one-tailed test is appropriate because I am hypothesising a specific directional effect (that applying the incongruent condition will increase task completion time).</p>
+                <p>A one-tailed test is appropriate because I am hypothesising a specific directional effect (that applying the incongruent condition will increase task completion time).</p>
                 <p>&alpha; &#61; 0.05 indicates the mean difference will be significant at p &#60; 0.05.</p>
             </div>
          
